@@ -14,7 +14,7 @@ const watchOpts = {
 };
 
 // get bundles list
-const bundlesDir = path.join(rootDir, 'desktop.bundles');
+const bundlesDir = path.join(rootDir, 'bundles/desktop.bundles');
 const bundles = fs.readdirSync(bundlesDir).filter(function(file) {
     return fs.statSync(path.join(bundlesDir, file)).isDirectory();
 });

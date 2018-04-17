@@ -5,9 +5,9 @@ const helpers = require('./helpers')();
 
 const bundleName = 'index';
 const pathToBundle = {
-    'desktop': path.resolve(__dirname, '..', 'desktop.bundles', bundleName),
-    'phone': path.resolve(__dirname, '..', 'phone.bundles', bundleName),
-    'tablet': path.resolve(__dirname, '..', 'tablet.bundles', bundleName),
+    'desktop': path.resolve(__dirname, '..', 'bundles/desktop.bundles', bundleName),
+    'phone': path.resolve(__dirname, '..', 'bundles/phone.bundles', bundleName),
+    'tablet': path.resolve(__dirname, '..', 'bundles/tablet.bundles', bundleName),
 };
 
 const isDev = process.env.NODE_ENV === 'development';

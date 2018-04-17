@@ -23,7 +23,7 @@ const enbBemTechs = require('enb-bem-techs');
 
 const commonLevels = [
     { path: 'node_modules/bem-core/common.blocks', check: false },
-    'common.blocks',
+    'blocks/common.blocks',
 ];
 
 const extraLevels = [
@@ -33,14 +33,14 @@ const extraLevels = [
 ];
 
 const isProd = process.env.YENV === 'production';
-isProd || commonLevels.push('development.blocks');
+isProd || commonLevels.push('blocks/development.blocks');
 
 module.exports = function(config) {
     extraLevels.forEach(level => {
-        config.nodes(level + '.bundles/*', function(nodeConfig) {
+        config.nodes('bundles/' + level + '.bundles/*', function(nodeConfig) {
             nodeConfig.addTechs([
                 // essential
-                [enbBemTechs.levels, { levels: [...commonLevels, level + '.blocks']}],
+                [enbBemTechs.levels, { levels: [...commonLevels, 'blocks/' + level + '.blocks']}],
                 [techs.fileProvider, { target: '?.bemdecl.js' }],
                 [enbBemTechs.deps],
                 [enbBemTechs.files],
@@ -95,15 +95,15 @@ module.exports = function(config) {
                 [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
                 [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }],
 
-                [techs.fileCopy, { source: '?.min.js', target: `../../static/js/?.${level}.min.js` }],
-                [techs.fileCopy, { source: '?.min.css', target: `../../static/css/?.${level}.min.css` }]
+                [techs.fileCopy, { source: '?.min.js', target: `../../../static/js/?.${level}.min.js` }],
+                [techs.fileCopy, { source: '?.min.css', target: `../../../static/css/?.${level}.min.css` }]
             ]);
 
             nodeConfig.addTargets([
                 '?.bemtree.js',
                 '?.bemhtml.js',
-                `../../static/js/?.${level}.min.js`,
-                `../../static/css/?.${level}.min.css`
+                `../../../static/js/?.${level}.min.js`,
+                `../../../static/css/?.${level}.min.css`
             ]);
         });
     });
