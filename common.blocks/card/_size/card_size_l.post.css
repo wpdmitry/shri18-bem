@@ -1,0 +1,9 @@
+.card_size_l {
+    grid-column: span 6;
+    grid-row: span 1;
+
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    grid-column-gap: 16px;
+}

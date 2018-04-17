@@ -1,0 +1,6 @@
+.card__title_size_s {
+    max-height: 4rem;
+    font-size: 1.1rem;
+    padding-bottom: .7rem;
+    overflow: hidden;
+}

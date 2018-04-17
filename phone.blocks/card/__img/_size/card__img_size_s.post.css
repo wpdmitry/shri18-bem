@@ -1,0 +1,5 @@
+.card__img_size_s {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    z-index: 1;
+}

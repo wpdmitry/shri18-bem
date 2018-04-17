@@ -1,0 +1,5 @@
+.main {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+}

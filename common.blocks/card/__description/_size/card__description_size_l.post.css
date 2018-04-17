@@ -1,0 +1,7 @@
+.card__description_size_l {
+    font-size: .9rem;
+    line-height: 1.3rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 1rem;
+}

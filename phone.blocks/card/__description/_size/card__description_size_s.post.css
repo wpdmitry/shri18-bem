@@ -1,0 +1,6 @@
+.card__description_size_s {
+    min-height: 3.9rem;
+    max-height: 7.5rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}

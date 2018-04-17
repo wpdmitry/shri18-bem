@@ -1,0 +1,9 @@
+.card__toolbox_down {
+    width: auto !important;
+    height: 16px !important;
+    padding: 9px 0 !important;
+    grid-column: 1 / 2 !important;
+    grid-row: 3 / 4 !important;
+    flex-direction: row !important;
+    background-color: #fff !important;
+}

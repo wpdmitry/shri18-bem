@@ -1,0 +1,7 @@
+.card__toolbox_size_m {
+    width: 17px;
+    padding: 9px 5px 0;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    flex-direction: column;
+}

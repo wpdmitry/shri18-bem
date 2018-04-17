@@ -1,0 +1,8 @@
+.card__toolbox_size_l {
+    height: 16px;
+    padding: 8px 0;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    z-index: 1;
+    flex-direction: row;
+}

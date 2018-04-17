@@ -1,0 +1,8 @@
+.card_size_m {
+    grid-row: span 1;
+
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto 62px;
+
+    grid-row-gap: 8px;
+}
