@@ -7,7 +7,10 @@ npm-debug.log
 
 # bem
 .enb/tmp/
-*bundles*/*/*.*
-!*bundles*/*/*.bemdecl.js
-*bundles*/*/*.tmpl.bemdecl.js
-!*bundles*/.bem/*
+bundles/*bundles*/*/*.*
+bundles/!*bundles*/*/*.bemdecl.js
+bundles/*bundles*/*/*.tmpl.bemdecl.js
+bundles/!*bundles*/.bem/*
+
+static/css
+static/js
