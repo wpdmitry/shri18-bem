@@ -3,6 +3,8 @@ module.exports = () => {
 
     return {
         getData(device) {
+            // клонирование и полный обход всех данных происходит на каждый запрос
+            // вместо этого можно при старте приложения подготавливать данные на каждый девайс один раз
             const transition = this.transition(device);
 
             let newData = _data.slice();
@@ -14,36 +16,10 @@ module.exports = () => {
         },
 
         transition(device) {
-            let transition;
-
-            switch (device) {
-                case 'phone': {
-                    transition = {
-                        's': 's',
-                        'm': 's',
-                        'l': 's',
-                    };
-                    break;
-                }
-                case 'tablet': {
-                    transition = {
-                        's': 's',
-                        'm': 'm',
-                        'l': 'm',
-                    };
-                    break;
-                }
-                case 'desktop': {
-                    transition = {
-                        's': 's',
-                        'm': 'm',
-                        'l': 'l',
-                    };
-                    break;
-                }
-            }
-
-            return transition;
+            return Object.assign({ s: 's', m: 'm', l: 'l' }, {
+                phone: { m: 's', l: 's', },
+                tablet: { l: 'm' }
+            }[device]);
         }
     }
 };
